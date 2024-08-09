@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hello-zig"
+authors = [
+    {name = "Sébastien Boisgérault", email = "Sebastien.Boisgerault@gmail.com"},
+]
+version = "0.0.1"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+hello_zig = ["hello-zig"]
+
+[project.scripts]
+hello-zig = "hello_zig:main"
